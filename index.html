@@ -71,7 +71,7 @@
         }
         header{
             width: 100vw;  height: 30px;
-            padding-left: 40px;
+            padding-left: 20px;
             display: flex;
             align-items: center;
             position: relative;
@@ -87,7 +87,7 @@
             width: 100%;   height: 300px;
             margin: auto;
             position: relative;
-            top: 10px;
+            top: 30px;
         }
         #perfil , #historia{
             justify-content: center;
@@ -117,37 +117,60 @@
             border-radius: 50%;
         }
         #txt_destaques{
-            margin-top: 120px;
+            margin-top: 150px;
             color: rgb(1, 71, 62);
             font-size: 17pt;
             text-align: center;
         }
         #slider_fotos{
-            width: 100vw;  height: 320px;
+            width: 100vw;  height: 400px;
             overflow: hidden;
             display: flex;
-            margin-top: 20px;
+            margin-top: 40px;
             justify-content: center;
             align-items: center;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
         }
         #slider_moldura{
-            width: 400px;  height: 300px;
+            width: 380px;  height: 350px;
             border: 2px solid rgb(2, 110, 100);
             border-radius: 10px 30px 20px 15px;
             overflow: hidden;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            margin: auto;
+            margin-left: 10px;
         }
         #slider_moldura img{
-            width: 100% ;
+            max-width: 100% ;
+            max-height: 350px;
             margin: auto;
             position: relative;
             top: 50%;
-            transform: translateY(-50%);
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #btns_slide{
+            width: 99vw;
+            height: 70px;
+            /*background-color: blue;*/
+            margin: auto;
+            z-index: 20;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            padding: auto 20px auto 20px;
         }
         .btn_slider{
-            width: 30px;  height: 50px;
-            margin: 60px;
+            width: 40px;  height: 70px;
             cursor: pointer;
             transform: scale(1);
+            position: relative;
+            padding: 10px;
+            background-color: rgba(3, 18, 31, 0.363);
         }
         .btn_slider:active{ transform: scale(.7); }
         
@@ -189,7 +212,7 @@
             top: 0;  right: 0;
         }
         #historia{
-            top:  500px ;
+            top:  700px ;
             font-size: 13pt;
             text-align: left;
             text-decoration: underline wavy rgba(2, 117, 112,.2);
@@ -202,7 +225,7 @@
         #space{
             width: 100%;  height: 100px ;
             position: relative;
-            top: 600px; left: 0;
+            top: 1000px; left: 0;
         }
         a{color: rgb(1, 37, 37);text-decoration: none;
         }
@@ -230,12 +253,14 @@
 
         <!-- slider de destaques -->
         <div id="slider_fotos">
-            <img src="btn_slider_voltar.png" alt="" class="btn_slider">
             <div id="slider_moldura">
                 <img src="fotos freddie/foto_freddie_destaque_1.jpeg" id="fotos_destaque"/>
                 <p id="teste"></p>
             </div>
-            <img src="btn_slider_prox.png" alt=""  class="btn_slider">
+            <div id="btns_slide">
+                <img src="btn_slider_voltar.png" alt=""  class="btn_slider">
+                <img src="btn_slider_prox.png" alt=""  class="btn_slider">
+            </div>
         </div>
     </section>
     <!-- historia -->
